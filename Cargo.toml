@@ -1,0 +1,9 @@
+[package]
+name = "plushuang-metrics"
+version = "0.1.0"
+authors = ["huangjiahao"]
+edition = "2021"
+description = "Some systeminfo for fleet-core"
+license = "MIT"
+[dependencies]
+sysinfo = "0.32"
