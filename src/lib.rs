@@ -9,7 +9,7 @@ use sysinfo::{Disks, System};
 /// ```
 /// use sysinfo::{Components, Disks, Networks, System};
 /// let mut sys: System = System::new_all();
-/// assert_eq!(collection_learning::total_num_cpus(&mut sys), Ok(16));
+/// assert_eq!(plushuang_metrics::total_num_cpus(&mut sys), Ok(16));
 /// ```
 pub fn total_num_cpus(sys: &mut System) -> Result<usize, String> {
     sys.refresh_cpu_all();
@@ -29,7 +29,7 @@ pub fn total_num_cpus(sys: &mut System) -> Result<usize, String> {
 /// ```
 /// use sysinfo::{Components, Disks, Networks, System};
 /// let mut sys: System = System::new_all();
-/// assert_eq!(collection_learning::used_num_cpus(&mut sys), Ok(16));
+/// assert_eq!(plushuang_metrics::used_num_cpus(&mut sys), Ok(16));
 /// ```
 pub fn availabe_num_cpus(sys: &mut System) -> Result<usize, String> {
     sys.refresh_cpu_all();
@@ -54,7 +54,7 @@ pub fn availabe_num_cpus(sys: &mut System) -> Result<usize, String> {
 /// ```
 /// use sysinfo::{Components, Disks, Networks, System};
 /// let mut sys: System = System::new_all();
-/// assert_eq!(collection_learning::total_memory(&mut sys), Ok(16));
+/// assert_eq!(plushuang_metrics::total_memory(&mut sys), Ok(16));
 /// ```
 pub fn total_memory(sys: &mut System) -> Result<u64, String> {
     sys.refresh_memory();
@@ -73,7 +73,7 @@ pub fn total_memory(sys: &mut System) -> Result<u64, String> {
 /// ```
 /// use sysinfo::{Components, Disks, Networks, System};
 /// let mut sys: System = System::new_all();
-/// assert_eq!(collection_learning::available_memory(&mut sys), Ok(7233028096));
+/// assert_eq!(plushuang_metrics::available_memory(&mut sys), Ok(7233028096));
 /// ```
 pub fn available_memory(sys: &mut System) -> Result<u64, String> {
     sys.refresh_memory(); // 刷新内存数据
@@ -95,7 +95,7 @@ pub fn available_memory(sys: &mut System) -> Result<u64, String> {
 /// ```
 /// use sysinfo::{Components, Disks, Networks, System};
 /// let mut sys: System = System::new_all();
-/// assert_eq!(collection_learning::total_space(&mut sys), Ok(1254954610688));
+/// assert_eq!(plushuang_metrics::total_space(&mut sys), Ok(1254954610688));
 /// ```
 
 pub fn total_space(sys: &mut System) -> Result<u64, String> {
@@ -118,7 +118,7 @@ pub fn total_space(sys: &mut System) -> Result<u64, String> {
 /// ```
 /// use sysinfo::{Components, Disks, Networks, System};
 /// let mut sys: System = System::new_all();
-/// assert_eq!(collection_learning::available_space(&mut sys), Ok(866847330304));
+/// assert_eq!(plushuang_metrics::available_space(&mut sys), Ok(866847330304));
 /// ```
 pub fn available_space(sys: &mut System) -> Result<u64, String> {
     let disks: Disks = Disks::new_with_refreshed_list();
