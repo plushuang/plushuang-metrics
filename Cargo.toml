@@ -1,6 +1,6 @@
 [package]
 name = "plushuang-metrics"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["huangjiahao"]
 edition = "2021"
 description = "Some systeminfo for fleet-core"
